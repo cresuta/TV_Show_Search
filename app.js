@@ -7,9 +7,18 @@ form.addEventListener('submit', async function (e) {
 })
 
 const retrieveTVShow = (show) => {
-    console.log(show.data.name);
-    console.log(show.data.image.medium);
-    console.log(show.data.network.name);
-    console.log(show.data.genres);
-    console.log(show.data.rating.average);
+    const name = document.querySelector('h3')
+    const img = document.querySelector('img')
+    const showDetails = document.querySelector('#showDetails')
+    const networkName = document.createElement('li')
+    const genres = document.createElement('li')
+    const ratingAvg = document.createElement('li')
+    name.innerText = show.data.name
+    img.src = show.data.image.medium
+    networkName.innerText = show.data.network.name
+    genres.innerText = show.data.genres
+    ratingAvg.innerText = `${show.data.rating.average}/10`
+    showDetails.appendChild(networkName);
+    showDetails.appendChild(genres);
+    showDetails.appendChild(ratingAvg);
 }
