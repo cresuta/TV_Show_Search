@@ -15,9 +15,9 @@ const retrieveTVShow = (show) => {
     const ratingAvg = document.createElement('li')
     name.innerText = show.data.name
     img.src = show.data.image.medium
-    networkName.innerText = show.data.network.name
-    genres.innerText = show.data.genres
-    ratingAvg.innerText = `${show.data.rating.average}/10`
+    networkName.innerText = `Network - ${show.data.network.name}`
+    genres.innerText = `Genres - ${show.data.genres}`
+    ratingAvg.innerText = `Rating - ${show.data.rating.average}/10`
     showDetails.appendChild(networkName);
     showDetails.appendChild(genres);
     showDetails.appendChild(ratingAvg);

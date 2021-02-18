@@ -1,0 +1,14 @@
+#tvShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showDetails {
+    list-style-type: none;
+}
+
+img {
+    width: 200px;
+}
