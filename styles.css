@@ -3,12 +3,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 #showDetails {
     list-style-type: none;
+    text-align: center;
 }
 
 img {
     width: 200px;
+}
+
+ul {
+    margin: 0 5px;
+    padding: 0;
 }
