@@ -1,13 +1,13 @@
 const form = document.querySelector('#searchForm')
 form.addEventListener('submit', async function (e) {
-    e.preventDefault()
-    const newSearch = this.elements.query.value
-    const res = await axios.get(`http://api.tvmaze.com/singlesearch/shows?q=${newSearch}`)
-    retrieveTVShow(res)
+    e.preventDefault();
+    const newSearch = this.elements.query.value;
+    const res = await axios.get(`http://api.tvmaze.com/singlesearch/shows?q=${newSearch}`);
+    retrieveTVShow(res);
+    form.elements.query.value = "";
 })
 
 const retrieveTVShow = (show) => {
-    const name = document.createElement('h3');
     const img = document.createElement('img');
     const showDetails = document.querySelector('#showDetails');
     const networkName = document.createElement('li');
